@@ -1,0 +1,87 @@
+.logincontainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  #formLogin {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  #formLogin h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+  }
+  
+  #formLogin input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+  
+  #formLogin input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  #formLogin button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #formLogin button:hover {
+    background-color: #0056b3;
+  }
+  
+  #formLogin p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  #formLogin a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  #formLogin a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  @media (max-width: 480px) {
+    #formLogin {
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+    }
+  
+    #formLogin h2 {
+      font-size: 1.5rem;
+    }
+  
+    #formLogin input,
+    #formLogin button {
+      font-size: 0.95rem;
+      padding: 0.65rem 0.9rem;
+    }
+  }
+  

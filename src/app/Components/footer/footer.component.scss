@@ -1,0 +1,36 @@
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    z-index: 1000;
+  
+    .sectorICons {
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: gray;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  
+      .icons {
+        display: flex;
+        gap: 30px;
+        font-size: 24px;
+  
+        i {
+          color: #fff;
+          transition: transform 0.2s ease, color 0.3s ease;
+  
+          &:hover {
+            color: #ffcc70; 
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+  

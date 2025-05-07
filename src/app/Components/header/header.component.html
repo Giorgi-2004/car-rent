@@ -1,0 +1,19 @@
+<nav>
+  <div class="brand">
+    <div class="title">Step Rents</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul [class.active]="menuActive">
+    <li>
+      <a routerLink="/caradd" (click)="toggleMenu()">მანქანის დამატება</a>
+    </li>
+  </ul>
+</nav>
+

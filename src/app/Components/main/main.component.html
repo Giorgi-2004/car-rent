@@ -1,0 +1,32 @@
+<form #filterForm="ngForm" (ngSubmit)="onFilterSubmit(filterForm)">
+  <select id="city" [(ngModel)]="selectedCity" name="city" required class="sel">
+    <option value="location" disabled hidden>მდებარეობა</option>
+    <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+  </select>
+  
+
+  <input type="number" [(ngModel)]="capacity" name="capacity" placeholder="ტევადობა" min="1" />
+  <input type="number" [(ngModel)]="yearFrom" name="yearFrom" placeholder="წლოვანება (დან)" min="1900" />
+  <input type="number" [(ngModel)]="yearTo" name="yearTo" placeholder="წლოვანება (მდე)" min="1900" />
+
+  <button type="submit">ძიება</button>
+</form>
+
+
+
+<div class="card-wrapper">
+  <div class="card" *ngFor="let car of filteredCars">
+    <div class="card-image" [ngStyle]="{'background-image': 'url(' + car.imageUrl1 + ')'}"></div>
+    <div class="card-content">
+      <h2>{{ car.model }}</h2>
+      <h3>ქალაქი: {{ car.city }}</h3>
+      <h3>ტევადობა: {{ car.capacity }}</h3>
+      <h3>წლოვანება: {{ car.year }}</h3>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #noResults>
+  <p>შედეგი არ მოიძებნა</p>
+</ng-template>
