@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    background-image: url(https://sdmntprwestus2.oaiusercontent.com/files/00000000-9c04-61f8-bb71-0ec73a66ba8a/raw?se=2025-05-08T12%3A54%3A37Z&sp=r&sv=2024-08-04&sr=b&scid=70920316-1fc8-55fd-91c2-2bbc57372c69&skoid=acefdf70-07fd-4bd5-a167-a4a9b137d163&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T01%3A23%3A40Z&ske=2025-05-09T01%3A23%3A40Z&sks=b&skv=2024-08-04&sig=s58IaHO7itS76M4b45nzOZ%2BSTibjnVifc7Jkp5WNLe0%3D);
   }
   
   #formLogin {
@@ -66,8 +67,9 @@
   #formLogin a:hover {
     text-decoration: underline;
   }
+
+
   
- 
   @media (max-width: 480px) {
     #formLogin {
       padding: 1.5rem 1rem;

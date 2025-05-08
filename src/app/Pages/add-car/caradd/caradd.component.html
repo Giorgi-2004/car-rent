@@ -1,1 +1,148 @@
-<p>caradd works!</p>
+<div class="main">
+  <form id="form" #carForm="ngForm" (ngSubmit)="onSubmit(carForm)">
+    <a routerLink="/landing">მთავარ გვერდზე დაბრუნება</a>
+  
+    <input
+      id="Brand"
+      type="text"
+      name="Brand"
+      [(ngModel)]="car.brand"
+      placeholder="ბრენდი"
+      required
+    >
+  
+    <input
+      id="Model"
+      type="text"
+      name="Model"
+      [(ngModel)]="car.model"
+      placeholder="მოდელი"
+      required
+    >
+  
+    <input
+      id="City"
+      type="text"
+      name="City"
+      [(ngModel)]="car.city"
+      placeholder="ქალაქი"
+      required
+    >
+
+    <input
+      id="Year"
+      type="number"
+      name="Year"
+      [(ngModel)]="car.year"
+      placeholder="წლოვანება"
+      min="1700"
+      required
+    >
+  
+    <input
+      id="Price"
+      type="number"
+      name="Price"
+      [(ngModel)]="car.price"
+      placeholder="ფასი"
+      min="500"
+      required
+    >
+  
+    <input
+      id="Capacity"
+      type="number"
+      name="Capacity"
+      [(ngModel)]="car.capacity"
+      placeholder="ტევადობა"
+      min="0"
+      required
+    >
+  
+    <select
+      id="Transmission"
+      name="Transmission"
+      [(ngModel)]="car.transmission"
+      class="car2"
+      required
+    >
+      <option value="">გადაცემათა კოლოფი</option>
+      <option value="მექანიკა">მექანიკა</option>
+      <option value="ავტომატიკა">ავტომატიკა</option>
+    </select>
+  
+    <input
+      id="Email"
+      type="text"
+      name="Email"
+      [(ngModel)]="car.createdByEmail"
+      placeholder="მეილი"
+      required
+    >
+  
+
+  
+    <label for="FuelCapacity">ძრავის მოცულობა</label>
+    <input
+      type="number"
+      id="FuelCapacity"
+      name="FuelCapacity"
+      [(ngModel)]="car.fuelCapacity"
+      class="type"
+      required
+    >
+  
+    <label for="image1">ფოტო1</label>
+    <input
+      type="file"
+      id="image1"
+      name="image1"
+      (change)="onFileChange($event, 'image1')"
+      accept="image/png"
+    >
+  
+    <label for="image2">ფოტო2</label>
+    <input
+      type="file"
+      id="image2"
+      name="image2"
+      (change)="onFileChange($event, 'image2')"
+      accept="image/png"
+    >
+  
+    <label for="image3">ფოტო3</label>
+    <input
+      type="file"
+      id="image3"
+      name="image3"
+      (change)="onFileChange($event, 'image3')"
+      accept="image/png"
+    >
+  
+    <input
+      id="Latitude"
+      type="number"
+      name="Latitude"
+      [(ngModel)]="car.latitude"
+      placeholder="გრძედი"
+      min="0"
+      required
+    >
+  
+    <input
+      id="Longitude"
+      type="number"
+      name="Longitude"
+      [(ngModel)]="car.longitude"
+      placeholder="განედი"
+      min="0"
+      required
+    >
+  
+    <button type="submit">ატვირთვა</button>
+  </form>
+  
+
+
+
+<app-errordialog></app-errordialog>

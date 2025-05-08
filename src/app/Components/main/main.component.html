@@ -1,6 +1,6 @@
 <form #filterForm="ngForm" (ngSubmit)="onFilterSubmit(filterForm)">
   <select id="city" [(ngModel)]="selectedCity" name="city" required class="sel">
-    <option value="location" disabled hidden>მდებარეობა</option>
+    <option value="">მდებარეობა</option>
     <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
   </select>
   
@@ -30,3 +30,5 @@
 <ng-template #noResults>
   <p>შედეგი არ მოიძებნა</p>
 </ng-template>
+
+<app-errordialog></app-errordialog>

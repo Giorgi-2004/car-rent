@@ -4,10 +4,13 @@ import { Router, RouterModule } from '@angular/router';
 import { Login } from '../../../Models/login';
 import { LocalstrService } from '../../../Services/localstr.service';
 import { LoginService } from '../../../Services/login.service';
+import { cookie_Service } from '../../../Services/cookie.service';
+import { ErrordialogComponent } from "../../../errordialog/errordialog.component";
+
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule,RouterModule,],
+  imports: [FormsModule, RouterModule, ErrordialogComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -17,7 +20,12 @@ export class LoginComponent {
   constructor(private httpClient: LoginService,
     private router : Router,
     private local : LocalstrService,
+    private _cookie:cookie_Service
   ) {}
+
+  ngOnInit(){
+    this._cookie.setCookie();
+  }
 
 
      phoneNumber: string ="";

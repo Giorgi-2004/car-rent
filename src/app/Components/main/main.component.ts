@@ -5,11 +5,12 @@ import { Car } from '../../Models/car';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ErrordialogComponent } from "../../errordialog/errordialog.component";
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, ErrordialogComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

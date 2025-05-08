@@ -3,11 +3,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RegisterService } from '../../../Services/register.service';
 import { Register } from '../../../Models/register';
+import { ErrordialogComponent } from "../../../errordialog/errordialog.component";
 
 
 @Component({
   selector: 'app-register',
-  imports: [FormsModule,RouterModule],
+  imports: [FormsModule, RouterModule, ErrordialogComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })

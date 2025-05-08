@@ -13,7 +13,7 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: gray;
+      background-color: mistyrose;
       box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
   
       .icons {
@@ -22,11 +22,11 @@ footer {
         font-size: 24px;
   
         i {
-          color: #fff;
+          color: sandybrown;
           transition: transform 0.2s ease, color 0.3s ease;
   
           &:hover {
-            color: #ffcc70; 
+            color: #555; 
             transform: scale(1.2);
           }
         }

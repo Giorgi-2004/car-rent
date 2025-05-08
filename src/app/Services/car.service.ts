@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClientService } from './HttpClientService';
+import { Caradd } from '../Models/caradd';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,11 @@ export class CarService {
 
   getAllCars() {
     return this.httpClientService.getAll('https://rentcar.stepprojects.ge/api/Car/paginated?pageIndex=1&pageSize=10');
+  }
+
+  addCar(car: Caradd)
+  {
+    return this.httpClientService.postApi("https://rentcar.stepprojects.ge/api/Car", car);
   }
 
   getFilters(city: string, capacity: number | null, startYear: number | null, endYear: number | null) {
